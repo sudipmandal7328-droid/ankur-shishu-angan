@@ -1,0 +1,9 @@
+{
+  "name": "ankur-shishu-angan",
+  "version": "1.0.0",
+  "description": "Ankur Shishu Angan",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
