@@ -1,13 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js"></script>
-  <title>html</title>
+
+  <title>Ankur Shishu Angan</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f8ff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4facfe, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    nav {
+      background: white;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1677ff;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 20px;
+      background: #eaf6ff;
+    }
+
+    .hero h2 {
+      color: #0878d1;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .card {
+      background: white;
+      margin: 20px 0;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      color: #0878d1;
+      margin-bottom: 10px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .service {
+      background: #f0f8ff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .service h3 {
+      color: #0878d1;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 22px;
+      background: #0878d1;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #123;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 27px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-	<h1>html</h1>
+
+  <header>
+    <h1>🌱 Ankur Shishu Angan</h1>
+    <p>শিশুদের সুন্দর ভবিষ্যতের প্রথম ধাপ</p>
+  </header>
+
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#services">পরিষেবা</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>স্বাগতম Ankur Shishu Angan-এ</h2>
+    <p>
+      শিশুদের শিক্ষা, যত্ন, পুষ্টি ও সুন্দর বিকাশের জন্য
+      একটি ভালোবাসাপূর্ণ পরিবেশ।
+    </p>
+  </section>
+
+  <main class="container">
+
+    <section class="card" id="about">
+      <h2>📚 আমাদের সম্পর্কে</h2>
+      <p>
+        Ankur Shishu Angan শিশুদের প্রাথমিক শিক্ষা ও
+        সার্বিক বিকাশের জন্য একটি সুন্দর ও নিরাপদ পরিবেশ
+        তৈরি করার উদ্দেশ্যে কাজ করে।
+      </p>
+    </section>
+
+    <section class="card" id="services">
+      <h2>✨ আমাদের কার্যক্রম</h2>
+
+      <div class="services">
+
+        <div class="service">
+          <h3>📖 শিক্ষা</h3>
+          <p>শিশুদের প্রাথমিক শিক্ষা ও শেখার সুযোগ।</p>
+        </div>
+
+        <div class="service">
+          <h3>🍎 পুষ্টি</h3>
+          <p>শিশুদের পুষ্টি ও স্বাস্থ্য সম্পর্কে সচেতনতা।</p>
+        </div>
+
+        <div class="service">
+          <h3>🎨 সৃজনশীলতা</h3>
+          <p>খেলা, ছবি আঁকা ও বিভিন্ন সৃজনশীল কার্যক্রম।</p>
+        </div>
+
+        <div class="service">
+          <h3>❤️ যত্ন</h3>
+          <p>শিশুদের জন্য নিরাপদ ও ভালোবাসাপূর্ণ পরিবেশ।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card contact" id="contact">
+      <h2>📞 যোগাযোগ</h2>
+      <p>আমাদের সঙ্গে যোগাযোগ করতে নিচের বাটনে ক্লিক করুন।</p>
+
+      <!-- এখানে নিজের ফোন নম্বর বসাবে -->
+      <a href="tel:YOUR_PHONE_NUMBER">📱 ফোন করুন</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Ankur Shishu Angan</p>
+    <p>সকল অধিকার সংরক্ষিত</p>
+  </footer>
+
 </body>
-</html>
+		  </html>
