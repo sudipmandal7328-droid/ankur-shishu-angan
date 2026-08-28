@@ -13,7 +13,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f7fe;
-      display: none; /* পাসওয়ার্ড না দেওয়া পর্যন্ত পেজ হাইড থাকবে */
+      display: none; /* পাসওয়ার্ড সঠিক না হওয়া পর্যন্ত হাইড থাকবে */
     }
     .header {
       background: linear-gradient(135deg, #00b4db, #0083b0);
@@ -58,42 +58,17 @@
     }
   </style>
 
-  <!-- Firebase JavaScript SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-
   <script>
-    // আপনার Firebase Config (আপনার স্ক্রিনশটের অরিজিনাল ডাটা অনুযায়ী)
-    const firebaseConfig = {
-      apiKey: "AIzaSyABaMHWl5PlY3SCqgvEHNue04-58N38",
-      authDomain: "ankur-shishu-angan.firebaseapp.com",
-      projectId: "ankur-shishu-angan",
-      storageBucket: "ankur-shishu-angan.appspot.com",
-      messagingSenderId: "598386152640",
-      appId: "1:598386152640:web:85342cb35b62b10",
-      measurementId: "G-W06H1X18Z6"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-
-    // পেজ লোড হওয়ার সাথে সাথে লগইন চেক
+    // পেজ লোড হলেই পাসওয়ার্ড পপ-আপ আসবে
     window.onload = function() {
-      const email = prompt("অ্যাক্সেস করতে আপনার Email দিন:");
-      const password = prompt("আপনার Password দিন:");
+      const password = prompt("ওয়েবসাইটে প্রবেশ করতে পাসওয়ার্ড দিন:");
 
-      if (email && password) {
-        auth.signInWithEmailAndPassword(email, password)
-          .then((userCredential) => {
-            alert("স্বাগতম! লগইন সফল হয়েছে।");
-            document.body.style.display = "block"; // পেজ দেখাবে
-          })
-          .catch((error) => {
-            alert("ভুল তথ্য দেওয়া হয়েছে! অ্যাক্সেস দেওয়া সম্ভব নয়।");
-            document.write("<h2 style='text-align:center; margin-top:50px; color:red;'>অ্যাক্সেস সংরক্ষিত (Access Denied)</h2>");
-          });
+      // আপনি চাইলে "123456" বদলে আপনার পছন্দের যেকোনো পাসওয়ার্ড দিতে পারেন
+      if (password === "123456") {
+        alert("স্বাগতম! লগইন সফল হয়েছে।");
+        document.body.style.display = "block";
       } else {
-        alert("ইমেল এবং পাসওয়ার্ড দেওয়া বাধ্যতামূলক!");
+        alert("ভুল পাসওয়ার্ড!");
         document.write("<h2 style='text-align:center; margin-top:50px; color:red;'>অ্যাক্সেস সংরক্ষিত (Access Denied)</h2>");
       }
     };
